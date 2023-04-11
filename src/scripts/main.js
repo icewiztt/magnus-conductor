@@ -38,7 +38,7 @@ class App {
 
     this.state = {
       loaded: false,
-      percentageLoaded: 0,
+      percentageLoaded: 100,
       calibrating: true,
       conducting: false,
       stopped: false,

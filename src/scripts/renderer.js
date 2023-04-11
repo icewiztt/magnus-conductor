@@ -32,6 +32,7 @@ export default class Renderer {
 
     this.pages = {
       start: document.querySelector('.page-start'),
+      selection: document.querySelector('.page-selection'),
       tutorial: document.querySelector('.page-tutorial'),
       main: document.querySelector('.page-main'),
       info: document.querySelector('.page-info'),
@@ -89,7 +90,7 @@ export default class Renderer {
   /* Add event listeners now that DOM has loaded */
   addStartHooks() {
     this.elems.startButton.addEventListener('click', () => {
-      if (this.props.state.loaded) this.renderTutorialPage();
+      if (this.props.state.loaded) this.renderSelectionPage();
     })
     this.elems.restartButtons.forEach((button) => {
       button.addEventListener('click', () => {
@@ -133,10 +134,25 @@ export default class Renderer {
     }, 1500);
   }
 
+  /* Selection Page */
+  renderSelectionPage() {
+    hide(this.pages.start);
+    show(this.pages.selection, 'flex');
+    this.addSelectionHooks();
+  }
+
+  addSelectionHooks() {
+    document.querySelectorAll('.selection-song-play').forEach((button) => {
+      button.addEventListener('click', () => {
+        this.renderTutorialPage();
+      });
+    });
+  }
+
   /* Tutorial Page */
 
   renderTutorialPage() {
-    hide(this.pages.start);
+    hide(this.pages.selection);
     show(this.pages.tutorial)
     show(document.querySelector('.tutorial-part-1'), 'flex');
     this.addTutorialHooks();
