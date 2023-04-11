@@ -26,7 +26,7 @@ import { getBeatLengthFromTempo, constrain } from './helpers';
 export default class AudioPlayer {
   constructor(props) {
     this.props = props;
-    this.instrumentsLoaded = 0;
+    this.instrumentsLoaded = 100;
     this.activeInstruments = [];
     this.velocity = 0.7;  // Arbitrary starting point that will be overridden by user
     this.finishedInstruments = 0;
