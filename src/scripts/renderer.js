@@ -108,8 +108,9 @@ export default class Renderer {
   /* Updates the loading button on the start page */
   renderLoadProgress(progress) {
     // Progress is a value between 0 and 100
-    this.elems.startButton.style.background = 'linear-gradient(to right, #ff8976 '
+    this.elems.startButton.style.background = 'linear-gradient(to right, #C58940 '
       + progress + '%, rgba(0,0,0,0) ' + progress + '%)';
+    this.elems.startButton.style.font = '700';
 
     if (progress === 100) {
       // Make button active

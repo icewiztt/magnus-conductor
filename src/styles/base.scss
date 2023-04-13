@@ -2,8 +2,9 @@
 
 /* Variable Declarations */
 
-$primary-color:  #ff8976 !default;
-$secondary-color: #313390 !default;
+$primary-color:  #C58940 !default;
+$secondary-color: #4F091D !default;
+$third-color: #F2E7D5 !default;
 $base-font-size: 19px;
 $video-width: 600px;
 $video-height: 500px;
@@ -58,13 +59,12 @@ button, .button {
   border: 0;
   -webkit-appearance: none;
   background: $primary-color;
-  color: white;
   cursor: pointer;
   padding: 0.3rem 1rem;
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  color: $secondary-color;
+  color: #e0d9d3;
 
   // Animation
   transform: translateY(0);
